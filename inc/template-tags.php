@@ -15,11 +15,12 @@
   * @since Shape 1.0
   */
  function shape_posted_on() {
-     printf( __( 'Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'shape' ),
-         esc_url( get_permalink() ),
-         esc_attr( get_the_time() ),
+     /*printf( __( 'Infört <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="byline"><!-- by <span class="author vcard"> <a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s--></a></span></span>', 'shape' ),*/
+     printf( __( 'Infört <time class="entry-date" datetime="%1$s" pubdate>%2$s</time><span class="byline"><!-- by <span class="author vcard"> <a class="url fn n" href="%3$s" title="%4$s" rel="author">%5$s--></a></span></span>', 'shape' ),
          esc_attr( get_the_date( 'c' ) ),
-         esc_html( get_the_date() ),
+         /*esc_html( get_the_date() ),*/
+         esc_html(date_i18n('j F, Y', strtotime(get_the_date()))),
+         /*esc_html(get_the_date()),*/
          esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
          esc_attr( sprintf( __( 'View all posts by %s', 'shape' ), get_the_author() ) ),
          esc_html( get_the_author() )

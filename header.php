@@ -46,6 +46,8 @@
         <!--[if lt IE 9]>
         <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
         <![endif]-->
+            <script type="text/javascript" src="//use.typekit.net/kei0ded.js"></script>
+            <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
         <?php wp_head(); ?>
     </head>
 
@@ -54,10 +56,13 @@
     <div id="page" class="hfeed site">
 
 
-     <header id="masthead" class="site-header" role="banner">
+     <header id="masthead" class="site-header tk-museo-sans" role="banner">
           <hgroup>
-               <h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-               <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+               <img src="<?php echo get_template_directory_uri(); ?>/images/motorheadmagnus.png"/>
+               <div class="description-area">
+                   <h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                   <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+               </div>
           </hgroup>
           <nav role="navigation" class="site-navigation main-navigation">
               <h1 class="assistive-text"><?php _e( 'Menu', 'shape' ); ?></h1>
@@ -67,5 +72,7 @@
 
 
      </header><!-- #masthead .site-header -->
+
+        <div id="speechbubble-tip"></div>
 
         <div id="main" class="site-main">

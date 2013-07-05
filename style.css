@@ -14,18 +14,42 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+/* Temporarily hide cluttering stuff */
+.site-navigation, .widget-area, .site-footer {
+    display: none;
+}
+
+
 body {
     font-family: Georgia, Times New Roman, Serif;
     font-size: 13px;
-    background-color: #000;
+    background: url(images/mochaGrunge.png);
     margin: 0px;
 }
 
 h2 {
-    font-family: adobe-caslon-pro, georgia, serif;
-    font-size: 1.8em;
+    font-size: 1.1em;
     font-weight: normal;
     font-style: italic;
+}
+
+.entry-title {
+    font-family: Georgia, Times New Roman;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 1.9em;
+    color: rgb(199, 183, 172);
+    /*margin-bottom: 10px;*/
+}
+
+.entry-meta {
+    font-size: 0.8em;
+    color: #555;
+    margin-left: 40px;
+}
+
+article {
+    font-family: "museo-sans",sans-serif;
 }
 
 a {
@@ -36,12 +60,19 @@ a:hover {
     border-bottom: 1px dotted rgb(129, 105, 64);
 }
 
+.site-title a {
+    color: #fff;
+}
+.site-title a:hover {
+    border-bottom: 1px dotted #fff;
+}
+
+
 .date {
     font-size: 0.8em;
 }
 
 #content {
-    max-width: 700px;
     background-color: #f0f0f0;
     color: #555;
     font-size: 1.5em;
@@ -49,16 +80,17 @@ a:hover {
     padding: 50px;
 }
 
-.content-area {
+.site-content {
     background-color: #f0f0f0;
     margin-left: 300px;
+    border-radius: 0 0 0 5px;
 }
 
-.speechbubble-tip {
+#speechbubble-tip {
     display: block;
     position: absolute;
-    top: 106px;
-    left: 246px;
+    top: 150px;
+    left: 235px;
     width: 0;
     border-width: 65px 65px 0;
     border-style: solid;
@@ -68,6 +100,7 @@ a:hover {
 
 article {
     padding-left: 40px;
+    max-width: 700px;
 }
 
 #masthead {
@@ -98,10 +131,51 @@ article {
     margin-bottom: 16px;
 }
 
-/* Mobile */
-@media screen and (max-width: 800px) {
+.entry-content {
+    margin-left: 40px;
+}
 
-    .speechbubble-tip {
+
+/* Comments */
+#reply-title {
+    display: none;
+}
+
+.logged-in-as {
+    display: none;
+}
+
+.comment-form-comment label {
+    display: none;
+}
+
+.form-allowed-tags {
+    display: none;
+}
+
+#commentform {
+    max-width: 700px;
+    margin-left: 80px;
+}
+
+#comment {
+    width: 435px;
+    font-family: "museo-sans",sans-serif;
+    font-size: 18px;
+}
+
+.comment-form-comment {
+    margin-bottom: 0px;
+}
+
+.form-submit {
+    margin-top: 0px;
+}
+
+/* Smaller browser window */
+@media screen and (max-width: 900px) {
+
+    #speechbubble-tip {
         display: none;
     }
 
@@ -111,14 +185,18 @@ article {
     }
 
     #masthead img {
-        margin-bottom: -4px;
+        margin-bottom: -3px;
     }
 
-    #masthead #title {
+    #masthead .description-area {
         font-size: 1.2em;
-        display: inline-block;
+        /*display: inline-block;
         position: relative;
-        bottom: 85px;
+        bottom: 85px;*/
+        display: block;
+        position: absolute;
+        top: 140px;
+        left: 300px;
     }
 
     #masthead .site-description {
@@ -130,17 +208,33 @@ article {
         margin-left: 0px;
     }
 
-    #main {
+    .site-content {
         margin-left: 0px;
     }
 
-    #content {
-        max-width: 640px;
-    }
-
     article {
+        max-width: 640px;
         padding-left: 0px;
     }
+
+    .entry-title {
+        margin-top: 0px;
+    }
+
+    .entry-content {
+        margin-left: 0px;
+    }
+
+    .entry-meta {
+        margin-left: 0px;
+    }
+
+
+    #commentform {
+        margin-left: 40px;
+    }
+
+
 }
 
 /* Mobile */
@@ -156,11 +250,12 @@ article {
         margin-left: -20px;
     }
 
-    #masthead hgroup {
-        font-size: 0.8em;
-        display: inline-block;
-        position: relative;
-        bottom: 25px;
+    #masthead .description-area {
+        font-size: 1em;
+        display: block;
+        position: absolute;
+        top: 44px;
+        left: 166px;
     }
 
     #masthead .site-description {
@@ -179,4 +274,15 @@ article {
         font-size: 1.7em;
     }
 
+    #commentform {
+        margin-left: 40px;
+    }
+
+    #comment {
+        width: 260px;
+    }
+
+    .entry-content {
+        margin-left: 0px;
+    }
 }

@@ -17,7 +17,7 @@
 
 
           <div id="primary" class="content-area">
-               <div id="content" class="site-content">
+               <div id="content" class="site-content tk-museo-sans">
 
                     <?php if ( have_posts() ) : ?>
                         <?php shape_content_nav( 'nav-above' ); ?>
