@@ -13,3 +13,170 @@ Text Domain: nothing
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+
+body {
+    font-family: Georgia, Times New Roman, Serif;
+    font-size: 13px;
+    background-color: #000;
+    margin: 0px;
+}
+
+h2 {
+    font-family: adobe-caslon-pro, georgia, serif;
+    font-size: 1.8em;
+    font-weight: normal;
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(129, 105, 64);
+}
+a:hover {
+    border-bottom: 1px dotted rgb(129, 105, 64);
+}
+
+.date {
+    font-size: 0.8em;
+}
+
+#content {
+    max-width: 700px;
+    background-color: #f0f0f0;
+    color: #555;
+    font-size: 1.5em;
+    line-height: 28px;
+    padding: 50px;
+}
+
+.content-area {
+    background-color: #f0f0f0;
+    margin-left: 300px;
+}
+
+.speechbubble-tip {
+    display: block;
+    position: absolute;
+    top: 106px;
+    left: 246px;
+    width: 0;
+    border-width: 65px 65px 0;
+    border-style: solid;
+    border-color: #f0f0f0 transparent;
+    z-index: -1;
+}
+
+article {
+    padding-left: 40px;
+}
+
+#masthead {
+    float: left;
+    color: #f0f0f0;
+    white-space: nowrap;
+}
+
+#masthead .site-description {
+    white-space: normal;
+    width: 200px;
+    margin-left: 40px;
+    font-size: 1.1em;
+}
+
+.typekit-badge {
+    display: none !important;
+}
+
+#masthead img {
+    margin: 40px;
+}
+
+#masthead h1 {
+    margin: 40px;
+    font-size: 2.2em;
+    margin-top: -20px;
+    margin-bottom: 16px;
+}
+
+/* Mobile */
+@media screen and (max-width: 800px) {
+
+    .speechbubble-tip {
+        display: none;
+    }
+
+    #masthead {
+        float: none;
+        color: #f0f0f0;
+    }
+
+    #masthead img {
+        margin-bottom: -4px;
+    }
+
+    #masthead #title {
+        font-size: 1.2em;
+        display: inline-block;
+        position: relative;
+        bottom: 85px;
+    }
+
+    #masthead .site-description {
+        margin-left: 0px;
+        width: 300px;
+    }
+
+    #masthead h1 {
+        margin-left: 0px;
+    }
+
+    #main {
+        margin-left: 0px;
+    }
+
+    #content {
+        max-width: 640px;
+    }
+
+    article {
+        padding-left: 0px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    #content {
+        margin: 0px;
+        padding: 20px;
+        max-width: 480px;
+        font-size: 1.2em;
+    }
+
+    #masthead {
+        margin-left: -20px;
+    }
+
+    #masthead hgroup {
+        font-size: 0.8em;
+        display: inline-block;
+        position: relative;
+        bottom: 25px;
+    }
+
+    #masthead .site-description {
+        width: 150px;
+    }
+
+    #masthead img {
+        width: 100px;
+        margin-bottom: -3px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    #masthead h1 {
+        margin-top: 10px;
+        font-size: 1.7em;
+    }
+
+}
