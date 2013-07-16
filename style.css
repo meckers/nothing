@@ -21,7 +21,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 
 body {
-    font-family: Georgia, Times New Roman, Serif;
+    /*font-family: Georgia, Times New Roman, Serif;*/
+    font-family: "museo-sans",sans-serif;
     font-size: 13px;
     background: url(images/mochaGrunge.png);
     margin: 0px;
@@ -49,7 +50,7 @@ h2 {
 }
 
 article {
-    font-family: "museo-sans",sans-serif;
+
 }
 
 a {
@@ -135,6 +136,12 @@ article {
     margin-left: 40px;
 }
 
+/*
+.entry-content img {
+    max-width: 600px;
+    height: auto;
+} */
+
 
 /* Comments */
 #reply-title {
@@ -153,9 +160,25 @@ article {
     display: none;
 }
 
-#commentform {
+#comments {
+    font-size: 0.8em;
     max-width: 700px;
     margin-left: 80px;
+    margin-top: 40px;
+    border-top: 1px solid #999;
+}
+
+#comments input[type=text] {
+    font-family: "museo-sans",sans-serif;
+    font-size: 14px;
+    height: 20px;
+
+}
+
+
+#comments label {
+    display: block;
+    width: 200px;
 }
 
 #comment {
@@ -230,8 +253,8 @@ article {
     }
 
 
-    #commentform {
-        margin-left: 40px;
+    #comments {
+        margin-left: 0px;
     }
 
 
@@ -284,5 +307,10 @@ article {
 
     .entry-content {
         margin-left: 0px;
+    }
+
+    .entry-content img {
+        max-width: 340px;
+        height: auto;
     }
 }
